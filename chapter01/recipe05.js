@@ -1,3 +1,4 @@
+/*jshint phantom:true, devel:true */
 require('webpage')
   .create()
   .open('http://localhost:3000/cookie-demo', function(status) {
