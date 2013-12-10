@@ -1,0 +1,4 @@
+{
+  "cookiesFile"     : "cookie-jar.txt",
+  "ignoreSslErrors" : true
+}
