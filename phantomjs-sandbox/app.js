@@ -1,3 +1,4 @@
+/*jshint node:true */
 var express = require('express'),
     routes  = require('./routes'),
     path    = require('path'),

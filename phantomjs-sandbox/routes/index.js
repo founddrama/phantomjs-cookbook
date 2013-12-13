@@ -1,3 +1,4 @@
+/*jshint node:true */
 /**
  * GET home page.
  */
