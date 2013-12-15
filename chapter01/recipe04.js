@@ -1,3 +1,4 @@
+/*jshint devel:true, phantom:true */
 if (phantom.args.length === 0) {
   console.log('No arguments were passed in.');
 } else {

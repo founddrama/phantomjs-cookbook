@@ -5,17 +5,7 @@ var page  = require('webpage').create(),
 
 page.onResourceReceived = function(res) {
   if (res.stage === 'end') {
-    for (var p in res) {
-      if (p === 'headers') {
-        console.log(p + ' =');
-        res[p].forEach(function(header, i) {
-          console.log('    [' + i + '] ' + header.name + ' = ' + header.value);
-        });
-      } else {
-        console.log(p + ' = ' + res[p]);
-      }
-    }
-    console.log('');
+    console.log(JSON.stringify(res, undefined, 2));
   }
 };
 
