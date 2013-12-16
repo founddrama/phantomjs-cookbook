@@ -1,3 +1,4 @@
+/*jshint devel:true, phantom:true*/
 var page = require('webpage').create();
 
 page.open('http://blog.founddrama.net/', function(status) {
