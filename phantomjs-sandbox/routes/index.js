@@ -40,3 +40,14 @@ exports.cacheDemo = function(req, res) {
     title: 'PhantomJS Cookbook Cache Demo (Chapter 1, Recipe 6)'
   });
 };
+
+/**
+ * GET demo JSON response for simple ajax demo (Chapter 3, Recipe 13)
+ */
+exports.ajaxDemo = function(req, res) {
+  res.json({
+    time: new Date().getTime(),
+    randomNumber: Math.floor(Math.random() * 100),
+    initials: 'REF'
+  });
+};

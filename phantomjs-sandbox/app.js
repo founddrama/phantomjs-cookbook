@@ -18,11 +18,14 @@ app.use(express.static(path.join(__dirname, 'static'), {maxAge: 86400000}));
 
 app.get('/', routes.index);
 
-// Chapter 1, Recipe 5
+// Chapter 1, Recipe 5 (others?)
 app.get('/cookie-demo', routes.cookieDemo);
 
-// Chapter 1, Recipe 6
+// Chapter 1, Recipe 6 (others?)
 app.get('/cache-demo', routes.cacheDemo);
+
+// Chapter 3, Recipe 13
+app.get('/ajax-demo', routes.ajaxDemo);
 
 app.listen(app.get('port'));
 console.log('[phantomjs-sandbox] App is listening on %s.', app.get('port'));
