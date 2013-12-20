@@ -1,12 +1,11 @@
 /*jshint devel:true, phantom:true */
-var page = require('webpage').create(),
-    url  = 'http://localhost:3000/cookie-demo';
+var page = require('webpage').create();
 
 if (!phantom.cookiesEnabled) {
   console.log('Note: cookies not enabled.');
 }
 
-page.open(url, function(status) {
+page.open('http://localhost:3000/cookie-demo', function(status) {
   if (status === 'success') {
     console.log('We start with these cookies:');
     phantom.cookies.forEach(function(c) {
