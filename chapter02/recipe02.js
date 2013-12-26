@@ -27,7 +27,7 @@ page.open('http://localhost:3000/cookie-demo', function(status) {
 
     console.log('How many cookies after a clear? ' + phantom.cookies.length);
 
-    phantom.exit();    
+    phantom.exit();
   } else {
     console.error('Something is wrong!');
     phantom.exit(1);

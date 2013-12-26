@@ -1,5 +1,4 @@
 /*jshint devel:true, phantom:true */
-
 var fs        = require('fs'),
     targetDir = 'foo-log';
 
