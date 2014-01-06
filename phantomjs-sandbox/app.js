@@ -24,6 +24,9 @@ app.get('/cookie-demo', routes.cookieDemo);
 // Chapter 1, Recipe 6 (others?)
 app.get('/cache-demo', routes.cacheDemo);
 
+// Chapter 3, Recipe 3
+app.post('/post-demo', routes.postDemo);
+
 // Chapter 3, Recipe 13
 app.get('/ajax-demo', routes.ajaxDemo);
 

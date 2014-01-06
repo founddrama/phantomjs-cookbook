@@ -42,6 +42,13 @@ exports.cacheDemo = function(req, res) {
 };
 
 /**
+ * POST demo
+ */
+exports.postDemo = function(req, res) {
+  res.json(req.body);
+};
+
+/**
  * GET demo JSON response for simple ajax demo (Chapter 3, Recipe 13)
  */
 exports.ajaxDemo = function(req, res) {
