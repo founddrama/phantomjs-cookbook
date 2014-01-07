@@ -45,6 +45,7 @@ exports.cacheDemo = function(req, res) {
  * POST demo
  */
 exports.postDemo = function(req, res) {
+  console.log(req.body);
   res.json(req.body);
 };
 
