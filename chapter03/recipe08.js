@@ -1,33 +1,35 @@
 /*jshint devel:true, phantom:true*/
 
-// PRELIMINARY!
+var webpage = require('webpage').create(),
+    url     = 'http://localhost:3000/';
 
-var page = require('webpage').create(),
-    url  = 'http://blog.founddrama.net/';
+webpage.viewportSize = { width: 1280, height: 800 };
 
-page.viewportSize = {width: 1280, height: 800};
-
-page.onUrlChanged = function(targetUrl) {
-  console.log('New URL: ' + targetUrl);
+webpage.onUrlChanged = function(targetUrl) {
+  console.log('Latest URL: ' + targetUrl);
 };
 
-page.onLoadFinished = function(status) {
-  if (status === 'success') {
-    if (page.url !== url) {
-      phantom.exit();
-    }
-
-    var coords = page.evaluate(function() {
-      var firstLink = document.querySelector('.post p a');
-
-      return { x: firstLink.offsetLeft, y: firstLink.offsetTop };
-    });
-
-    page.sendEvent('click', coords.x + 1, coords.y + 1);
-  } else {
+webpage.onLoadFinished = function(status) {
+  if (status === 'fail') {
     console.error('webpage did not open successfully');
     phantom.exit(1);
   }
+
+  if (webpage.url !== url) {
+    console.log('URL changed; exiting...');
+    phantom.exit();
+  }
+
+  var coords = webpage.evaluate(function() {
+    var firstLink = document.querySelector('a');
+
+    return {
+      x: firstLink.offsetLeft,
+      y: firstLink.offsetTop
+    };
+  });
+
+  webpage.sendEvent('click', coords.x, coords.y);
 };
 
-page.open(url);
+webpage.open(url);
