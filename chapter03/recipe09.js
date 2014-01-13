@@ -1,33 +1,31 @@
 /*jshint devel:true, phantom:true*/
 
-// PRELIMINARY!
+var webpage = require('webpage').create();
 
-var page = require('webpage').create(),
-    url  = 'http://blog.founddrama.net/';
+webpage.viewportSize = { width: 1280, height: 800 };
 
-page.viewportSize = {width: 1280, height: 800};
+function getStageValue() {
+  return webpage.evaluate(function() {
+    return document.querySelector('#stage').innerText || '<BLANK>';
+  });
+}
 
-page.onUrlChanged = function(targetUrl) {
-  console.log('URL: ' + targetUrl);
-};
-
-page.onLoadFinished = function(status) {
-  if (status === 'success') {
-    if (page.url !== url) {
-      phantom.exit();
-    }
-
-    page.evaluate(function() {
-      // search input
-      document.querySelector('#s').focus();
-    });
-
-    page.sendEvent('keypress', 'phantomjs');
-    page.sendEvent('keypress', page.event.key.Enter);
-  } else {
+webpage.open('http://localhost:3000/input-demo', function(status) {
+  if (status === 'fail') {
     console.error('webpage did not open successfully');
     phantom.exit(1);
   }
-};
 
-page.open(url);
+  console.log('Starting #stage text is: ' + getStageValue());
+
+  webpage.evaluate(function() {
+    document.querySelector('#demo').focus();
+  });
+
+  webpage.sendEvent('keypress', 'phantomjs');
+  webpage.sendEvent('keypress', webpage.event.key.Enter);
+
+  console.log('After input, #stage value is: ' + getStageValue());
+
+  phantom.exit();
+});

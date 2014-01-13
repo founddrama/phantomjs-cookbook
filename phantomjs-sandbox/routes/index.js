@@ -59,3 +59,12 @@ exports.ajaxDemo = function(req, res) {
     initials: 'REF'
   });
 };
+
+/**
+ * Input demo. (Chapter 3, Recipe 9)
+ */
+exports.inputDemo = function(req, res) {
+  res.render('input-demo', {
+    title: 'Input Demo'
+  });
+};

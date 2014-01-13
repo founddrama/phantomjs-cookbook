@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= title %></title>
+  <style>
+    input[name="demo"] {
+      width: 500px;
+    }
+    #stage {
+      font-size: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <h1><%= title %></h1>
+  <input name="demo" id="demo" type="text" placeholder="Try typing something here, then pressing ENTER." />
+  <div id="stage"></div>
+  <script type="text/javascript">
+    var demo  = document.getElementById('demo'),
+        stage = document.getElementById('stage');
+    demo.addEventListener('keypress', function(event) {
+      if (event.keyCode === 13) {
+        stage.innerText = demo.value;
+      }
+    });
+  </script>
+</body>
+</html>

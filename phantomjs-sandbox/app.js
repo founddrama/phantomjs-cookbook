@@ -27,6 +27,9 @@ app.get('/cache-demo', routes.cacheDemo);
 // Chapter 3, Recipe 3
 app.post('/post-demo', routes.postDemo);
 
+// Chapter 3, Recipe 9
+app.get('/input-demo', routes.inputDemo);
+
 // Chapter 3, Recipe 13
 app.get('/ajax-demo', routes.ajaxDemo);
 
