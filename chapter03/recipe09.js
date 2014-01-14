@@ -1,35 +1,34 @@
 /*jshint devel:true, phantom:true*/
 
-// PRELIMINARY!
+var webpage = require('webpage').create();
 
-var page = require('webpage').create(),
-    url  = 'https://twitter.com/founddrama';
+webpage.viewportSize = { width: 1280, height: 800 };
+webpage.scrollPosition = { top: 0, left: 0 };
 
-page.viewportSize = {width: 1280, height: 800};
-page.scrollPosition = {top: 0, left: 0};
-
-page.open(url, function(status) {
-  if (status === 'success') {
-    var i = 0,
-        top,
-        queryFn = function() {
-          return document.body.scrollHeight;
-        };
-
-    setInterval(function() {
-      page.render('twitter-' + (++i) + '.png');
-
-      top = page.evaluate(queryFn);
-
-      console.log('top = ' + top);
-      page.scrollPosition = { top: top + 1, left: 0 };
-      
-      if (i >= 5) {
-        phantom.exit(0);
-      }
-    }, 3000);
-  } else {
+webpage.open('https://twitter.com/founddrama', function(status) {
+  if (status === 'fail') {
     console.error('webpage did not open successfully');
     phantom.exit(1);
   }
+
+  var i = 0,
+      top,
+      queryFn = function() {
+        return document.body.scrollHeight;
+      };
+
+  setInterval(function() {
+    var filename = 'twitter-' + (++i) + '.png';
+    console.log('Writing ' + filename + '...');
+    webpage.render(filename);
+
+    top = webpage.evaluate(queryFn);
+
+    console.log('[' + i + '] top = ' + top);
+    webpage.scrollPosition = { top: top + 1, left: 0 };
+
+    if (i >= 5) {
+      phantom.exit();
+    }
+  }, 3000);
 });
