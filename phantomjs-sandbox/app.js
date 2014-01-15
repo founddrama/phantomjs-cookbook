@@ -30,6 +30,9 @@ app.post('/post-demo', routes.postDemo);
 // Chapter 3, Recipe 9
 app.get('/input-demo', routes.inputDemo);
 
+// Chapter 3, Recipe 10
+app.get('/hover-demo', routes.hoverDemo);
+
 // Chapter 3, Recipe 13
 app.get('/ajax-demo', routes.ajaxDemo);
 

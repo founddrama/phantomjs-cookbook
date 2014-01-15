@@ -68,3 +68,12 @@ exports.inputDemo = function(req, res) {
     title: 'Input Demo'
   });
 };
+
+/**
+ * Hover demo. (Chapter 3, Recipe 10)
+ */
+exports.hoverDemo = function(req, res) {
+  res.render('hover-demo', {
+    title: 'Hover Demo'
+  });
+};

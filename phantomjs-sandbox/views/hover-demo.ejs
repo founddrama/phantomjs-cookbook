@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= title %></title>
+  <style>
+    .hover-demo {
+      width: 100px;
+      height: 100px;
+      border: 1px solid rgba(119, 17, 0, 0.8);
+      background-color: rgba(119, 17, 0, 0.1);
+      transition: background-color 0.7s;
+      -webkit-transition: background-color 0.7s;
+    }
+    .hover-demo:hover {
+      background-color: rgba(119, 17, 0, 0.9);
+    }
+  </style>
+</head>
+<body>
+  <h1><%= title %></h1>
+  <div class="hover-demo"></div>
+  <script type="text/javascript">
+    document.querySelector('.hover-demo').addEventListener('mousemove', function(e) {
+      console.log('[hover-demo] pointer has entered .hover-demo... [' +
+          e.clientX + ' \u00D7 ' + e.clientY + ']');
+    }, false);
+  </script>
+</body>
+</html>
