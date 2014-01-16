@@ -1,18 +1,16 @@
 /*jshint devel:true, phantom:true*/
 
-// PRELIMINARY!
-
-var page             = require('webpage').create(),
-    url              = 'http://www.flickr.com/photos/found_drama',
+var webpage          = require('webpage').create(),
+    url              = 'http://localhost:3000/cache-demo',
     imgRx            = /\.(?:gif|png|jpe?g)$/i,
     requestsMade     = 0,
     requestsCanceled = 0;
 
-page.viewportSize = {width: 1280, height: 800};
+webpage.viewportSize = { width: 1280, height: 800 };
 
-page.onResourceRequested = function(requestData, networkRequest) {
-  requestsMade += 1;
+webpage.onResourceRequested = function(requestData, networkRequest) {
   if (imgRx.test(requestData.url)) {
+    requestsMade += 1;
     if (Math.floor(Math.random() * 10) % 3 === 0) {
       requestsCanceled += 1;
       networkRequest.abort();
@@ -20,18 +18,17 @@ page.onResourceRequested = function(requestData, networkRequest) {
   }
 };
 
-page.onResourceError = function(resourceError) {
+webpage.onResourceError = function(resourceError) {
   console.error('Error with requested resource:\n' + JSON.stringify(resourceError, undefined, 2));
 };
 
 console.log('Simulating poor network weather for ' + url);
-page.open(url, function(status) {
-  if (status === 'success') {
-    console.log('Canceled ' + requestsCanceled + ' of ' + requestsMade + ' network requests.');
-    page.render('flickr.png');
-    phantom.exit();
-  } else {
-    console.error('webpage did not open successfully');
+webpage.open(url, function(status) {
+  if (status === 'fail') {
+    console.error(url + ' did not open successfully.');
     phantom.exit(1);
   }
+
+  console.log('Canceled ' + requestsCanceled + ' of ' + requestsMade + ' image requests.');
+  phantom.exit();
 });
