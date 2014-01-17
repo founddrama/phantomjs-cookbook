@@ -1,4 +1,7 @@
 /*jshint node:true */
+
+var ipsum = require('lorem-ipsum');
+
 /**
  * GET home page.
  */
@@ -75,5 +78,18 @@ exports.inputDemo = function(req, res) {
 exports.hoverDemo = function(req, res) {
   res.render('hover-demo', {
     title: 'Hover Demo'
+  });
+};
+
+/**
+ * CSS demo. (Chapter 3, Recipe 12)
+ */
+exports.cssDemo = function(req, res) {
+  res.render('css-demo', {
+    title: 'CSS Demo',
+    intro: ipsum({ count: 1, units: 'paragraphs' }),
+    col1:  ipsum({ count: 3, units: 'paragraphs' }),
+    col2:  ipsum({ count: 3, units: 'paragraphs' }),
+    col3:  ipsum({ count: 3, units: 'paragraphs' })
   });
 };
