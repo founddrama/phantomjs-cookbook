@@ -2,6 +2,7 @@
 <html>
 <head>
   <title><%= title %></title>
+  <link rel="stylesheet" href="/components/bootstrap/dist/css/bootstrap.min.css" />
   <style>
     .hover-demo {
       width: 100px;
@@ -17,8 +18,11 @@
   </style>
 </head>
 <body>
-  <h1><%= title %></h1>
-  <div class="hover-demo"></div>
+  <div class="container">
+    <h1><%= title %></h1>
+    <div class="hover-demo"></div>
+  </div>
+
   <script type="text/javascript">
     document.querySelector('.hover-demo').addEventListener('mousemove', function(e) {
       console.log('[hover-demo] pointer has entered .hover-demo... [' +

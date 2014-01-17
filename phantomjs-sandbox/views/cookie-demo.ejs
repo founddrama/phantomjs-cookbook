@@ -2,13 +2,18 @@
 <html>
   <head>
     <title><%= title %></title>
+    <link rel="stylesheet" href="/components/bootstrap/dist/css/bootstrap.min.css" />
   </head>
   <body>
-    <h1><%= title %></h1>
-    <p>We are dealing with cookies here.</p>
-    <pre id="cookie-tray">
-    </pre>
+    <div class="container">
+      <h1><%= title %></h1>
+       <p>We are dealing with cookies here.</p>
+     <pre id="cookie-tray">
+      </pre>
+    </div>
+
     <script type="text/javascript">
       document.getElementById('cookie-tray').innerHTML = document.cookie.toString();
     </script>
+  </body>
 </html>

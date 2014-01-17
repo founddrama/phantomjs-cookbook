@@ -2,19 +2,20 @@
 <html>
 <head>
   <title><%= title %></title>
+  <link rel="stylesheet" href="/components/bootstrap/dist/css/bootstrap.min.css" />
   <style>
-    input[name="demo"] {
-      width: 500px;
-    }
     #stage {
       font-size: 2rem;
     }
   </style>
 </head>
 <body>
-  <h1><%= title %></h1>
-  <input name="demo" id="demo" type="text" placeholder="Try typing something here, then pressing ENTER." />
-  <div id="stage"></div>
+  <div class="container">
+    <h1><%= title %></h1>
+    <input name="demo" id="demo" class="form-control" type="text" placeholder="Try typing something here, then pressing ENTER." />
+    <div id="stage"></div>
+  </div>
+
   <script type="text/javascript">
     var demo  = document.getElementById('demo'),
         stage = document.getElementById('stage');

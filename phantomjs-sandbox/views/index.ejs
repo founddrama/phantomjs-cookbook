@@ -1,15 +1,23 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title><%= title %></title>
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>INTRO TEXT FOR <em>THE PHANTOMJS COOKBOOK</em> DEMO PAGE GOES HERE...</p>
-    <ul>
+<head>
+  <title><%= title %></title>
+  <link rel="stylesheet" href="/components/bootstrap/dist/css/bootstrap.min.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="jumbotron">
+      <h1><%= title %></h1>
+      <p>INTRO TEXT FOR <em>THE PHANTOMJS COOKBOOK</em> DEMO PAGE GOES HERE...</p>
+    </div>
+
+    <ul class="list-inline">
       <li><a href="/cache-demo">/cache-demo</a></li>
       <li><a href="/cookie-demo">/cookie-demo</a></li>
+      <li><a href="/hover-demo">/hover-demo</a></li>
       <li><a href="/input-demo">/input-demo</a></li>
     </ul>
-  </body>
+
+  </div>
+</body>
 </html>
