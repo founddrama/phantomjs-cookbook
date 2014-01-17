@@ -1,34 +1,45 @@
 /*jshint devel:true, phantom:true*/
 
-var webpage          = require('webpage').create(),
-    url              = 'http://localhost:3000/cache-demo',
-    imgRx            = /\.(?:gif|png|jpe?g)$/i,
-    requestsMade     = 0,
-    requestsCanceled = 0;
+var webpage = require('webpage').create(),
+    url     = 'http://localhost:3000/css-demo',
+    cssRx   = /\.css\??.*$/i,
+    count   = 0;
 
 webpage.viewportSize = { width: 1280, height: 800 };
 
+webpage.clipRect = {
+  top:    0,
+  left:   0,
+  width:  1280,
+  height: 800
+};
+
+webpage.onLoadStarted = function() {
+  count += 1;
+};
+
 webpage.onResourceRequested = function(requestData, networkRequest) {
-  if (imgRx.test(requestData.url)) {
-    requestsMade += 1;
-    if (Math.floor(Math.random() * 10) % 3 === 0) {
-      requestsCanceled += 1;
-      networkRequest.abort();
-    }
+  if (count > 1 && cssRx.test(requestData.url)) {
+    console.log('Dropping CSS for ' + url);
+    networkRequest.abort();
   }
 };
 
-webpage.onResourceError = function(resourceError) {
-  console.error('Error with requested resource:\n' + JSON.stringify(resourceError, undefined, 2));
-};
-
-console.log('Simulating poor network weather for ' + url);
-webpage.open(url, function(status) {
+webpage.onLoadFinished = function(status) {
   if (status === 'fail') {
-    console.error(url + ' did not open successfully.');
+    console.error(url + ' did not open successfully');
     phantom.exit(1);
   }
 
-  console.log('Canceled ' + requestsCanceled + ' of ' + requestsMade + ' image requests.');
-  phantom.exit();
-});
+  if (count <= 1) {
+    console.log('Rendering ' + url + ' with CSS...');
+    webpage.render('demo-with-css.png');
+    webpage.reload();
+  } else {
+    console.log('Rendering ' + url + ' without CSS...');
+    webpage.render('demo-without-css.png');
+    phantom.exit();
+  }
+};
+
+webpage.open(url);
