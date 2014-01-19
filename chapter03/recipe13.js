@@ -1,20 +1,19 @@
 /*jshint devel:true, phantom:true*/
 
-// PRELIMINARY!
+var webpage = require('webpage').create();
 
-var page = require('webpage').create();
-
-page.onResourceReceived = function(response) {
-  console.log(JSON.stringify(response, undefined, 2));
+webpage.onResourceReceived = function(response) {
+  if (response.stage === 'end') {
+    console.log('Content-Type: ' + response.contentType);
+  }
 };
 
-page.open('http://localhost:3000/ajax-demo', function(status) {
-  if (status === 'success') {
-    // c/w page.content
-    console.log(page.plainText);
-    phantom.exit();
-  } else {
+webpage.open('http://localhost:3000/ajax-demo', function(status) {
+  if (status === 'fail') {
     console.error('webpage did not open successfully');
     phantom.exit(1);
   }
+
+  console.log(webpage.plainText);
+  phantom.exit();
 });
