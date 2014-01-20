@@ -2,8 +2,12 @@
 var express = require('express'),
     routes  = require('./routes'),
     path    = require('path'),
-    
-    app     = express();
+
+    app     = express(),
+    http    = require('http').createServer(app),
+
+    ws      = require('websocket-driver');
+
 
 app.set('port', process.env.PORT || 3000);
 app.set('views', __dirname + '/views');
@@ -39,5 +43,29 @@ app.get('/css-demo', routes.cssDemo);
 // Chapter 3, Recipe 13
 app.get('/ajax-demo', routes.ajaxDemo);
 
-app.listen(app.get('port'));
+// Chapter 3, Recipe 14
+http.on('upgrade', function(request, socket, body) {
+  if (!ws.isWebSocket(request)) return;
+
+  var driver = ws.http(request);
+
+  driver.io.write(body);
+  socket.pipe(driver.io).pipe(socket);
+
+  driver.messages.on('data', function(message) {
+    console.log('[WebSocket] %s', message);
+
+    setInterval(function() {
+      var json = JSON.stringify({
+        type:'message',
+        data: new Date().getTime()
+      });
+      driver.text(json);
+    }, 100);
+  });
+
+  driver.start();
+});
+
+http.listen(app.get('port'));
 console.log('[phantomjs-sandbox] App is listening on %s.', app.get('port'));
