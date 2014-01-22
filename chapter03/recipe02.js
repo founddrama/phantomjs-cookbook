@@ -1,13 +1,18 @@
 /*jshint devel:true, phantom:true*/
-var page = require('webpage').create();
+var webpage = require('webpage').create();
 
-page.open('http://blog.founddrama.net/', function(status) {
-  if (status === 'success') {
-    console.log('webpage opened successfully');
-    phantom.exit(0);
-  } else {
-    // status === 'fail'
-    console.error('webpage did not open successfully');
-    phantom.exit(1);
+webpage.open('http://blog.founddrama.net/', function(status) {
+  switch (status) {
+    case 'success':
+      console.log('webpage opened successfully');
+      phantom.exit(0);
+      break;
+    case 'fail':
+      console.error('webpage did not open successfully');
+      phantom.exit(1);
+      break;
+    default:
+      console.error('webpage opened with unknown status: ' + status);
+      phantom.exit(1);
   }
 });

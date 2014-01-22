@@ -13,11 +13,11 @@ webpage.onInitialized = function() {
 };
 
 webpage.open(url, 'POST', postData, function(status) {
-  if (status === 'success') {
-    console.log('Successful post to ' + url);
-    phantom.exit(0);
-  } else {
+  if (status === 'fail') {
     console.error('Something went wrong posting to ' + url);
     phantom.exit(1);
   }
+
+  console.log('Successful post to ' + url);
+  phantom.exit(0);
 });
