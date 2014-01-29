@@ -1,0 +1,9 @@
+{
+  "name": "phantomjs-cookbook-chapter04",
+  "description": "The sample code to go along with Chapter 4 of The PhantomJS Cookbook.",
+  "version": "0.0.1",
+  "devDependencies": {
+    "grunt": "~0.4.2",
+    "grunt-contrib-jasmine": "~0.5.2"
+  }
+}
