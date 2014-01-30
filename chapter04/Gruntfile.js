@@ -8,8 +8,15 @@ module.exports = function(grunt) {
           specs: '../lib/*-spec.js'
         }
       }
+    },
+    watch: {
+      scripts: {
+        files: ['../lib/*.js'],
+        tasks: ['jasmine']
+      }
     }
   });
 
   grunt.loadNpmTasks('grunt-contrib-jasmine');
+  grunt.loadNpmTasks('grunt-contrib-watch');
 };
