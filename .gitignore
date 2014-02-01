@@ -1,4 +1,6 @@
 cookie-jar.txt
 foo-log/
 twitter-*.png
+
 chapter04/node_modules/
+chapter04/coverage/
