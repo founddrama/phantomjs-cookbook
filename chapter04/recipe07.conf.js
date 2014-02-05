@@ -5,15 +5,12 @@ module.exports = function(config) {
     preprocessors: {
       '../lib/string-utils.js': 'coverage'
     },
-    port: 9876,
     reporters: ['progress', 'coverage'],
     coverageReporter: {
       type: 'html',
       dir: 'coverage/'
     },
-    colors: true,
     browsers: ['PhantomJS'],
-    captureTimeout: 60000,
     singleRun: true
   });
 };

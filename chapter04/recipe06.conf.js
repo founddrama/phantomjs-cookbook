@@ -1,11 +1,8 @@
 module.exports = function(config) {
   config.set({
     frameworks: ['jasmine'],
-    files: ['../lib/string-utils*.js'],
-    port: 9876,
-    colors: true,
+    files: ['../lib/string-utils.js', '../lib/string-utils-spec.js'],
     browsers: ['PhantomJS'],
-    captureTimeout: 60000,
     singleRun: true
   });
 };
