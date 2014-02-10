@@ -11,7 +11,7 @@ import static org.junit.Assert.assertEquals;
 
 public class PhantomJSDriverTest {
 
-    private static final String THE_TEXT = "PhantomJS + Ghost Driver";
+    private static final String THE_TEXT = "PhantomJS + GhostDriver";
 
     @Test
     public void testPhantomJSDriver() {

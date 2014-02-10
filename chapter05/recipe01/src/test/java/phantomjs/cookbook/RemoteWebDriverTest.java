@@ -14,7 +14,7 @@ import static org.junit.Assert.assertEquals;
 
 public class RemoteWebDriverTest {
 
-    private static final String THE_TEXT = "PhantomJS + Ghost Driver";
+    private static final String THE_TEXT = "PhantomJS + GhostDriver";
 
     // Don't forget to have a PhantomJS instance running:
     // $ phantomjs --webdriver=4444
