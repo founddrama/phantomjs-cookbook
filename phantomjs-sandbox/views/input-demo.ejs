@@ -1,29 +1,29 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title><%= title %></title>
-  <link rel="stylesheet" href="/components/bootstrap/dist/css/bootstrap.min.css" />
-  <style>
-    #stage {
-      font-size: 2rem;
-    }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <h1><%= title %></h1>
-    <input name="demo" id="demo" class="form-control" type="text" placeholder="Try typing something here, then pressing ENTER." />
-    <div id="stage"></div>
-  </div>
-
-  <script type="text/javascript">
-    var demo  = document.getElementById('demo'),
-        stage = document.getElementById('stage');
-    demo.addEventListener('keypress', function(event) {
-      if (event.keyCode === 13) {
-        stage.innerText = demo.value;
+  <head>
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/components/bootstrap/dist/css/bootstrap.min.css" />
+    <style>
+      #stage {
+        font-size: 2rem;
       }
-    }, false);
-  </script>
-</body>
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1><%= title %></h1>
+      <input name="demo" id="demo" class="form-control" type="text" placeholder="Try typing something here, then pressing ENTER." />
+      <div id="stage"></div>
+    </div>
+
+    <script type="text/javascript">
+      var demo  = document.getElementById('demo'),
+          stage = document.getElementById('stage');
+      demo.addEventListener('keypress', function(event) {
+        if (event.keyCode === 13) {
+          stage.innerText = demo.value;
+        }
+      }, false);
+    </script>
+  </body>
 </html>

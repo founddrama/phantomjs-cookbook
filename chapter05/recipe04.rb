@@ -5,7 +5,6 @@ require 'capybara/poltergeist'
 
 Capybara.run_server = false
 Capybara.default_driver = :poltergeist
-Capybara.javascript_driver = :poltergeist
 Capybara.app_host = 'http://localhost:3000'
 
 OUTPUT_STRING   = "=> Captured as '%s'"

@@ -4,15 +4,18 @@
     <title><%= title %></title>
     <link rel="stylesheet" href="/components/bootstrap/dist/css/bootstrap.min.css" />
     <style>
-      .hover-demo {
-        width: 100px;
-        height: 100px;
+      #precision-click-demo {
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+        width: 3px;
+        height: 3px;
         border: 1px solid rgba(119, 17, 0, 0.8);
         background-color: rgba(119, 17, 0, 0.1);
         transition: background-color 0.7s;
         -webkit-transition: background-color 0.7s;
       }
-      .hover-demo:hover {
+      #precision-click-demo:hover {
         background-color: rgba(119, 17, 0, 0.9);
       }
     </style>
@@ -20,12 +23,12 @@
   <body>
     <div class="container">
       <h1><%= title %></h1>
-      <div class="hover-demo"></div>
+      <div id="precision-click-demo"></div>
     </div>
 
     <script type="text/javascript">
-      document.querySelector('.hover-demo').addEventListener('mousemove', function(e) {
-        console.log('[hover-demo] pointer has entered .hover-demo... [' +
+      document.querySelector('#precision-click-demo').addEventListener('mousedown', function(e) {
+        console.log('[precision-click] pointer has click #precision-click... [' +
             e.clientX + ' \u00D7 ' + e.clientY + ']');
       }, false);
     </script>

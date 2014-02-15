@@ -7,7 +7,15 @@ var ipsum = require('lorem-ipsum');
  */
 exports.index = function(req, res) {
   res.render('index', {
-    title: 'PhantomJS Cookbook Demo'
+    title: 'PhantomJS Cookbook Demo',
+    links: [
+      '/cache-demo',
+      '/cookie-demo',
+      '/css-demo',
+      '/hover-demo',
+      '/input-demo',
+      '/precision-click'
+    ]
   });
 };
 
@@ -91,5 +99,14 @@ exports.cssDemo = function(req, res) {
     col1:  ipsum({ count: 3, units: 'paragraphs' }),
     col2:  ipsum({ count: 3, units: 'paragraphs' }),
     col3:  ipsum({ count: 3, units: 'paragraphs' })
+  });
+};
+
+/**
+ * Precision clicking in Capybara/Poltergeist. (Chapter 5, Recipe 5)
+ */
+exports.precisionClick = function(req, res) {
+  res.render('precision-click', {
+    title: 'Precision Clicks in Capybara/Poltergeist'
   });
 };

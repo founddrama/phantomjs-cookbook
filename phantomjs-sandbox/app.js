@@ -67,5 +67,8 @@ http.on('upgrade', function(request, socket, body) {
   driver.start();
 });
 
+// Chapter 5, Recipe 5
+app.get('/precision-click', routes.precisionClick);
+
 http.listen(app.get('port'));
 console.log('[phantomjs-sandbox] App is listening on %s.', app.get('port'));
