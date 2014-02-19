@@ -1,14 +1,15 @@
-var casper = require('casper').create({
-  viewportSize: {width:1280, height:1024}
-});
+var casper = require('casper').create();
 
 casper.start('http://localhost:3000/', function() {
-  this.clickLabel('/css-demo', 'a');
+  this.clickLabel('/input-demo', 'a');
 });
 
 casper.then(function() {
-  this.echo('The H1 reads:');
-  this.echo(this.getHTML('.jumbotron h1'));
+  this.sendKeys('#demo', 'PhantomJS + CasperJS', {keepFocus: true});
+  this.sendKeys('#demo', casper.page.event.key.Enter , {keepFocus: true});
+
+  this.echo('#stage text is:');
+  this.echo(this.getHTML('#stage'));
 });
 
 casper.run();
