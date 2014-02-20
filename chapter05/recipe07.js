@@ -6,7 +6,7 @@ casper.start('http://localhost:3000/', function() {
 
 casper.then(function() {
   this.sendKeys('#demo', 'PhantomJS + CasperJS', {keepFocus: true});
-  this.sendKeys('#demo', casper.page.event.key.Enter , {keepFocus: true});
+  this.sendKeys('#demo', casper.page.event.key.Enter, {keepFocus: true});
 
   this.echo('#stage text is:');
   this.echo(this.getHTML('#stage'));
