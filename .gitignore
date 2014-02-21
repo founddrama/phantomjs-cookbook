@@ -9,3 +9,5 @@ chapter05/recipe02/node_modules/
 chapter05*.png
 
 recipe09.xml
+screenshots/
+failures/
