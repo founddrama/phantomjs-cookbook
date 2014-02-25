@@ -21,7 +21,7 @@ module CookbookCapybaraDemo
   end
 end
 
-t = CookbookCapybaraDemo::Demo.new
-text = t.test_input_demo
+demo = CookbookCapybaraDemo::Demo.new
+text = demo.test_input_demo
 
 puts "=> input '#{THE_TEXT}' and #stage received '#{text}' (same = #{text == THE_TEXT})"

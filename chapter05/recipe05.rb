@@ -18,5 +18,5 @@ module CookbookCapybaraDemo
   end
 end
 
-t = CookbookCapybaraDemo::Demo.new
-t.precise_click
+demo = CookbookCapybaraDemo::Demo.new
+demo.precise_click

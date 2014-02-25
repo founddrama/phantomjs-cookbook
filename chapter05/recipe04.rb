@@ -46,5 +46,5 @@ module CookbookCapybaraDemo
   end
 end
 
-t = CookbookCapybaraDemo::Demo.new
-t.capture_viewport
+demo = CookbookCapybaraDemo::Demo.new
+demo.capture_viewport
