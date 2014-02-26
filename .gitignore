@@ -13,3 +13,5 @@ chapter05*.png
 recipe09.xml
 screenshots/
 failures/
+
+lib/confess/
