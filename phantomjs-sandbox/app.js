@@ -70,5 +70,8 @@ http.on('upgrade', function(request, socket, body) {
 // Chapter 5, Recipe 5
 app.get('/precision-click', routes.precisionClick);
 
+// Chapter 6, Recipe 3
+app.get('/appcache-demo', routes.appcacheDemo);
+
 http.listen(app.get('port'));
 console.log('[phantomjs-sandbox] App is listening on %s.', app.get('port'));

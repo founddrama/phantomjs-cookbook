@@ -110,3 +110,12 @@ exports.precisionClick = function(req, res) {
     title: 'Precision Clicks in Capybara/Poltergeist'
   });
 };
+
+/**
+ * appcache manifest demo. (Chapter 6, Recipe 3)
+ */
+exports.appcacheDemo = function(req, res) {
+  res.render('appcache-demo', {
+    title: 'appcache manifest demo'
+  });
+};
