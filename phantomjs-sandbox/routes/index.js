@@ -9,6 +9,7 @@ exports.index = function(req, res) {
   res.render('index', {
     title: 'PhantomJS Cookbook Demo',
     links: [
+      '/appcache-demo',
       '/cache-demo',
       '/cookie-demo',
       '/css-demo',

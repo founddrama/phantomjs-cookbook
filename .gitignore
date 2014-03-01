@@ -16,3 +16,4 @@ failures/
 
 lib/confess/
 phantomjs-sandbox/static/demo.appcache
+lib/yslow.js
