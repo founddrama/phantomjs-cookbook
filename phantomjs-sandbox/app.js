@@ -73,5 +73,8 @@ app.get('/precision-click', routes.precisionClick);
 // Chapter 6, Recipe 3
 app.get('/appcache-demo', routes.appcacheDemo);
 
+// Chapter 6, Recipe 5
+app.get('/cdn-demo', routes.cdnDemo);
+
 http.listen(app.get('port'));
 console.log('[phantomjs-sandbox] App is listening on %s.', app.get('port'));

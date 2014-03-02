@@ -120,3 +120,16 @@ exports.appcacheDemo = function(req, res) {
     title: 'appcache manifest demo'
   });
 };
+
+/**
+ * CDN demo. ("There's more..." in Chapter 6, Recipe 5)
+ */
+exports.cdnDemo = function(req, res) {
+  res.render('cdn-demo', {
+    title: 'CDN Demo',
+    intro: ipsum({ count: 1, units: 'paragraphs' }),
+    col1:  ipsum({ count: 3, units: 'paragraphs' }),
+    col2:  ipsum({ count: 3, units: 'paragraphs' }),
+    col3:  ipsum({ count: 3, units: 'paragraphs' })
+  });
+};
