@@ -1,0 +1,14 @@
+.banner {
+  position: relative;
+  background-color: rgb(65,65,60);
+  color: #eeeeee;
+}
+
+#phantomjs-logo {
+  background-image: url(/images/phantomjs-logo.png);
+  width: 240px;
+  height: 80px;
+  position: absolute;
+  bottom: 4px;
+  right: 4px;
+}
