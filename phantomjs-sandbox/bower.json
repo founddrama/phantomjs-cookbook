@@ -3,7 +3,8 @@
   "version": "0.0.1",
   "dependencies": {
     "bootstrap": "~3.0.3",
-    "moment": "~2.5.1"
+    "moment": "~2.5.1",
+    "snap.svg": "~0.2.0"
   },
   "devDependencies": {}
 }

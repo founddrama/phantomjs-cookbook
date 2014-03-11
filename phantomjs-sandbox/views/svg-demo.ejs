@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/components/bootstrap/dist/css/bootstrap.min.css" />
+    <style type="text/css" media="screen">
+      #svg-demo { vertical-align: middle; }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1><%= title %></h1>
+      <img src="/svg/eyes.svg" />
+      <svg id="svg-demo" height="400" width="400" xmlns="http://www.w3.org/2000/svg">
+      </svg>
+    </div>
+
+    <script type="text/javascript" src="/components/snap.svg/dist/snap.svg-min.js"></script>
+    <script type="text/javascript" src="/js/svg-demo.js"></script>
+  </body>
+</html>

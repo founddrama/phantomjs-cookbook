@@ -15,7 +15,8 @@ exports.index = function(req, res) {
       '/css-demo',
       '/hover-demo',
       '/input-demo',
-      '/precision-click'
+      '/precision-click',
+      '/svg-demo'
     ]
   });
 };
@@ -131,5 +132,14 @@ exports.cdnDemo = function(req, res) {
     col1:  ipsum({ count: 3, units: 'paragraphs' }),
     col2:  ipsum({ count: 3, units: 'paragraphs' }),
     col3:  ipsum({ count: 3, units: 'paragraphs' })
+  });
+};
+
+/**
+ * SVG demo. (Chapter 7, Recipe 3)
+ */
+exports.svgDemo = function(req, res) {
+  res.render('svg-demo', {
+    title: 'SVG Demo'
   });
 };

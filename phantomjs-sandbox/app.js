@@ -22,6 +22,8 @@ app.use(express.static(path.join(__dirname, 'static'), {maxAge: 86400000}));
 
 app.get('/', routes.index);
 
+// Routes:
+//
 // Chapter 1, Recipe 5 (others?)
 app.get('/cookie-demo', routes.cookieDemo);
 
@@ -75,6 +77,9 @@ app.get('/appcache-demo', routes.appcacheDemo);
 
 // Chapter 6, Recipe 5
 app.get('/cdn-demo', routes.cdnDemo);
+
+// Chapter 7, Recipe 3
+app.get('/svg-demo', routes.svgDemo);
 
 http.listen(app.get('port'));
 console.log('[phantomjs-sandbox] App is listening on %s.', app.get('port'));
