@@ -81,5 +81,8 @@ app.get('/cdn-demo', routes.cdnDemo);
 // Chapter 7, Recipe 3
 app.get('/svg-demo', routes.svgDemo);
 
+// Chapter 7, Recipe 7
+app.get('/responsive-demo', routes.responsiveDemo);
+
 http.listen(app.get('port'));
 console.log('[phantomjs-sandbox] App is listening on %s.', app.get('port'));

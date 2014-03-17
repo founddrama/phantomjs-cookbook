@@ -95,13 +95,7 @@ exports.hoverDemo = function(req, res) {
  * CSS demo. (Chapter 3, Recipe 12)
  */
 exports.cssDemo = function(req, res) {
-  res.render('css-demo', {
-    title: 'CSS Demo',
-    intro: ipsum({ count: 1, units: 'paragraphs' }),
-    col1:  ipsum({ count: 3, units: 'paragraphs' }),
-    col2:  ipsum({ count: 3, units: 'paragraphs' }),
-    col3:  ipsum({ count: 3, units: 'paragraphs' })
-  });
+  res.render('css-demo', getIpsum('CSS Demo'));
 };
 
 /**
@@ -126,13 +120,7 @@ exports.appcacheDemo = function(req, res) {
  * CDN demo. ("There's more..." in Chapter 6, Recipe 5)
  */
 exports.cdnDemo = function(req, res) {
-  res.render('cdn-demo', {
-    title: 'CDN Demo',
-    intro: ipsum({ count: 1, units: 'paragraphs' }),
-    col1:  ipsum({ count: 3, units: 'paragraphs' }),
-    col2:  ipsum({ count: 3, units: 'paragraphs' }),
-    col3:  ipsum({ count: 3, units: 'paragraphs' })
-  });
+  res.render('cdn-demo', getIpsum('CDN Demo'));
 };
 
 /**
@@ -143,3 +131,20 @@ exports.svgDemo = function(req, res) {
     title: 'SVG Demo'
   });
 };
+
+/**
+ * Responsive demo. (Chapter 7, Recipe 7)
+ */
+exports.responsiveDemo = function(req, res) {
+  res.render('responsive-demo', getIpsum('Responsive Demo'));
+};
+
+function getIpsum(title) {
+  return {
+    title: title,
+    intro: ipsum({ count: 1, units: 'paragraphs' }),
+    col1:  ipsum({ count: 3, units: 'paragraphs' }),
+    col2:  ipsum({ count: 3, units: 'paragraphs' }),
+    col3:  ipsum({ count: 3, units: 'paragraphs' })
+  };
+}
