@@ -1,5 +1,5 @@
 var webpage  = require('webpage').create(),
-    filename = 'index.pdf',
+    filename = 'css-demo.pdf',
     datetime = new Date().toString(),
     title;
 

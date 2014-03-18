@@ -1,5 +1,5 @@
 var webpage  = require('webpage').create(),
-    filename = 'index.pdf';
+    filename = 'css-demo.pdf';
 
 webpage.viewportSize = { width: 1024, height: 768 };
 

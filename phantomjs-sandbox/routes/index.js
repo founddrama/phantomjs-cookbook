@@ -16,6 +16,7 @@ exports.index = function(req, res) {
       '/hover-demo',
       '/input-demo',
       '/precision-click',
+      '/responsive-demo',
       '/svg-demo'
     ]
   });
