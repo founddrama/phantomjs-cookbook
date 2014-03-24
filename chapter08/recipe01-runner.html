@@ -17,6 +17,7 @@
 
         if (/PhantomJS/.test(navigator.userAgent)) {
           env.addReporter(new jasmine.JUnitXmlReporter('test-reports/', false));
+          env.addReporter(new jasmine.TrivialReporter());
           env.addReporter(new jasmine.TerminalReporter({
             verbosity: 3,
             color: false
