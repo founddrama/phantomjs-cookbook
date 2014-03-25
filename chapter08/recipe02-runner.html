@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>The PhantomJS Cookbook - Chapter Four - Recipe #1</title>
+  <link href="../lib/jasmine/jasmine.css" rel="stylesheet" />
+</head>
+<body>
+<script src="../lib/jasmine/jasmine.js" type="text/javascript"></script>
+<script src="../lib/jasmine/jasmine-html.js" type="text/javascript"></script>
+<script src="../lib/jasmine-reporters/jasmine.junit_reporter.js"></script>
+<script src="../lib/math-utils.js" type="text/javascript"></script>
+<script src="../lib/math-utils-spec.js" type="text/javascript"></script>
+<script type="text/javascript">
+  (function(jasmine) {
+    var env = jasmine.getEnv();
+
+    env.addReporter(new jasmine.HtmlReporter());
+    env.addReporter(new jasmine.JUnitXmlReporter('test-reports/', false));
+
+    env.execute();
+  }(jasmine));
+</script>
+</body>
+</html>
