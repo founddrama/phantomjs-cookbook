@@ -20,3 +20,5 @@ lib/yslow.js
 lib/yslow/
 
 phantomjs-sandbox/static/components/snap.svg/
+
+test-reports/
