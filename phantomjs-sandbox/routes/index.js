@@ -1,6 +1,7 @@
 /*jshint node:true */
 
-var ipsum = require('lorem-ipsum');
+var ipsum = require('lorem-ipsum'),
+    views = require('../views-list').views;
 
 /**
  * GET home page.
@@ -8,17 +9,11 @@ var ipsum = require('lorem-ipsum');
 exports.index = function(req, res) {
   res.render('index', {
     title: 'PhantomJS Cookbook Demo',
-    links: [
-      '/appcache-demo',
-      '/cache-demo',
-      '/cookie-demo',
-      '/css-demo',
-      '/hover-demo',
-      '/input-demo',
-      '/precision-click',
-      '/responsive-demo',
-      '/svg-demo'
-    ]
+    links: views.filter(function(it) {
+      return it !== 'index';
+    }).map(function(it) {
+      return '/' + it;
+    })
   });
 };
 

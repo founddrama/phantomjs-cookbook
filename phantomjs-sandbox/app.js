@@ -6,7 +6,9 @@ var express = require('express'),
     app     = express(),
     http    = require('http').createServer(app),
 
-    ws      = require('websocket-driver');
+    ws      = require('websocket-driver'),
+
+    views   = require('./views-list').views;
 
 
 app.set('port', process.env.PORT || 3000);
@@ -24,23 +26,13 @@ app.get('/', routes.index);
 
 // Routes:
 //
-// Chapter 1, Recipe 5 (others?)
-app.get('/cookie-demo', routes.cookieDemo);
 
-// Chapter 1, Recipe 6 (others?)
-app.get('/cache-demo', routes.cacheDemo);
+views.forEach(function(it) {
+  app.get('/' + it, routes[it.replace(/-([a-z])/g, function(m) { return m[1].toUpperCase(); })]);
+});
 
 // Chapter 3, Recipe 3
 app.post('/post-demo', routes.postDemo);
-
-// Chapter 3, Recipe 9
-app.get('/input-demo', routes.inputDemo);
-
-// Chapter 3, Recipe 10
-app.get('/hover-demo', routes.hoverDemo);
-
-// Chapter 3, Recipe 12
-app.get('/css-demo', routes.cssDemo);
 
 // Chapter 3, Recipe 13
 app.get('/ajax-demo', routes.ajaxDemo);
@@ -68,21 +60,6 @@ http.on('upgrade', function(request, socket, body) {
 
   driver.start();
 });
-
-// Chapter 5, Recipe 5
-app.get('/precision-click', routes.precisionClick);
-
-// Chapter 6, Recipe 3
-app.get('/appcache-demo', routes.appcacheDemo);
-
-// Chapter 6, Recipe 5
-app.get('/cdn-demo', routes.cdnDemo);
-
-// Chapter 7, Recipe 3
-app.get('/svg-demo', routes.svgDemo);
-
-// Chapter 7, Recipe 7
-app.get('/responsive-demo', routes.responsiveDemo);
 
 http.listen(app.get('port'));
 console.log('[phantomjs-sandbox] App is listening on %s.', app.get('port'));
