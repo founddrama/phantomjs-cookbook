@@ -16,8 +16,6 @@ failures/
 
 lib/confess/
 phantomjs-sandbox/static/demo.appcache
-lib/yslow.js
-lib/yslow/
 
 phantomjs-sandbox/static/components/snap.svg/
 

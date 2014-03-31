@@ -1,19 +1,19 @@
 /*jshint node:true */
 
-var ipsum = require('lorem-ipsum'),
-    views = require('../views-list').views;
+var ipsum = require('lorem-ipsum');
 
 /**
  * GET home page.
  */
+var LINKS = require('../views-list').views.filter(function(it) {
+    return it !== 'index';
+  }).map(function(it) {
+    return '/' + it;
+  });
 exports.index = function(req, res) {
   res.render('index', {
     title: 'PhantomJS Cookbook Demo',
-    links: views.filter(function(it) {
-      return it !== 'index';
-    }).map(function(it) {
-      return '/' + it;
-    })
+    links: LINKS
   });
 };
 
@@ -144,3 +144,13 @@ function getIpsum(title) {
     col3:  ipsum({ count: 3, units: 'paragraphs' })
   };
 }
+
+/**
+ * End-to-end demo. (Chapter 8, Recipe 5)
+ */
+exports.formDemo = function(req, res) {
+  res.render('form-demo', {
+    title: 'End-to-End Demo',
+    isPost: /POST/i.test(req.method)
+  });
+};

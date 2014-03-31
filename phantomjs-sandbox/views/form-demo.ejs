@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/components/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/css/form-demo.css" />
+  </head>
+  <body>
+    <div class="container">
+      <% if(isPost) { %>
+      <div class="alert alert-success">
+        <h1>Thank you.</h1>
+        <p>Your entry was received and your work here is done.</p>
+      </div>
+      <div class="row">
+        <div class="col-md-1 col-md-offset-5"><a href="/">Go home.</a></div>
+        <div class="col-md-1"><a href="/form-demo">Again.</a></div>
+      </div>
+      <% } else { %>
+        <h1>Register <small>(an end-to-end demo)</small></h1>
+        <form action="/form-demo" method="POST" role="form">
+          <div class="form-group email-fg">
+            <input type="email" class="form-control" id="email" name="email" placeholder="Email address" />
+            <div class="alert alert-danger hidden">
+              That doesn't look like an email address.
+            </div>
+          </div>
+          <div class="form-group password-fg">
+            <input type="password" class="form-control" id="password" name="password" placeholder="Password" />
+            <div class="alert alert-danger hidden">
+              <strong>Your password has problems.</strong> <span id="password-suggestions"></span>
+            </div>
+          </div>
+          <button class="btn btn-primary" type="submit" disabled="disabled">Submit</button>
+        </form>
+      <% } %>
+    </div>
+
+    <% if(!isPost) { %>
+    <script type="text/javascript" src="/js/form-demo-validators.js"></script>
+    <script type="text/javascript" src="/js/form-demo.js"></script>
+    <% } %>
+
+  </body>
+</html>

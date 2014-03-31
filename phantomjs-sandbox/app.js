@@ -61,5 +61,8 @@ http.on('upgrade', function(request, socket, body) {
   driver.start();
 });
 
+// Chapter 8, Recipe 5
+app.post('/form-demo', routes.formDemo);
+
 http.listen(app.get('port'));
 console.log('[phantomjs-sandbox] App is listening on %s.', app.get('port'));
