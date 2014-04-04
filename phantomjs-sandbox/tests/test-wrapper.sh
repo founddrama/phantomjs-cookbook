@@ -17,8 +17,4 @@ echo "Performance test results stored in test-reports/TEST-form-demo-yslow.xml"
 
 kill $NODE_PID
 
-if [ "$E2E_STATUS" == "0" -a "$PERF_STATUS" == "0" ]; then
-  exit 0
-else
-  exit 1
-fi
+[ $E2E_STATUS = 0 -a $PERF_STATUS = 0 ]; exit $?
