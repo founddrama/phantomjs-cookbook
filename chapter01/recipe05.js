@@ -1,7 +1,7 @@
 /*jshint phantom:true, devel:true */
-require('webpage')
-  .create()
-  .open('http://localhost:3000/cookie-demo', function(status) {
+var webpage = require('webpage').create();
+
+webpage.open('http://localhost:3000/cookie-demo', function(status) {
     if (status === 'success') {
       phantom.cookies.forEach(function(cookie, i) {
         for (var key in cookie) {
