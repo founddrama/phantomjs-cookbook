@@ -18,5 +18,6 @@ lib/confess/
 phantomjs-sandbox/static/demo.appcache
 
 phantomjs-sandbox/static/components/snap.svg/
+phantomjs-sandbox/node_modules/
 
 test-reports/
