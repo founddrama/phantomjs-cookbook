@@ -5,7 +5,7 @@ var webpage = require('webpage').create(),
     cssRx   = /\.css\??.*$/i,
     count   = 0;
 
-webpage.viewportSize = { width: 1280, height: 800 };
+webpage.viewportSize = { width: 1024, height: 768 };
 
 webpage.clipRect = {
   top:    0,
