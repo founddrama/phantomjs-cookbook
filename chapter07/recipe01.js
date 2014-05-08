@@ -1,7 +1,7 @@
 var webpage  = require('webpage').create(),
     filename = 'index.png';
 
-webpage.viewportSize = { width: 1024, height: 768 };
+webpage.viewportSize = { width: 1024, height: 384 };
 
 webpage.open('http://localhost:3000/', function(status) {
   if (status === 'fail') {

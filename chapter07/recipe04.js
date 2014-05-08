@@ -1,13 +1,13 @@
 var webpage  = require('webpage').create(),
     selector = require('system').args[1],
-    filename = selector ?
-               selector.replace(/\s/g, '-').replace(/\W/g, '') + '.png' :
-               null;
+    filename;
 
 if (!selector) {
   console.error('no selector was specified');
   phantom.exit(1);
 }
+
+filename = selector.replace(/\s/g, '-').replace(/\W/g, '') + '.png';
 
 webpage.viewportSize = { width: 1024, height: 768 };
 
