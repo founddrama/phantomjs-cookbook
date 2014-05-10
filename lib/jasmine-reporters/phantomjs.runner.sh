@@ -31,6 +31,13 @@ done
 cd $SCRIPTDIR
 rm -f *.xml
 
+## EXCLUDED FROM phantomjs-cookbook
+##
+# # make sure phantomjs submodule is initialized
+# cd ..
+# git submodule update --init
+##
+
 # fire up the phantomjs environment and run the test
 cd $SCRIPTDIR
 /usr/bin/env phantomjs $SCRIPTDIR/phantomjs-testrunner.js $TESTFILE
