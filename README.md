@@ -45,7 +45,6 @@ install the following as well:
 
 * **[WebStorm](http://www.jetbrains.com/webstorm/download/)** version 7.0.3 or greater;
 * **[Jenkins CI](http://jenkins-ci.org/)** version 1.552 or greater; and/or
-* **[TeamCity](http://www.jetbrains.com/teamcity/download/)** version 8.1.1 or greater.
 
 #### How do I get started?
 
