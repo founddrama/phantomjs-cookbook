@@ -1,3 +1,10 @@
+/**
+ * PhantomJS Cookbook
+ * Chapter 7 | Generating Images and Documents with PhantomJS
+ * Recipe 4  | Generating clipped screenshots from PhantomJS
+ *
+ * Supplementary version.
+ */
 var webpage  = require('webpage').create(),
     args     = require('system').args,
     width    = args[1],

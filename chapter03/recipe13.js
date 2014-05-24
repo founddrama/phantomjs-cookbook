@@ -1,5 +1,9 @@
 /*jshint devel:true, phantom:true*/
-
+/**
+ * PhantomJS Cookbook
+ * Chapter 3 | Working with webpage Objects
+ * Recipe 13 | Submitting Ajax requests from PhantomJS
+ */
 var webpage = require('webpage').create();
 
 webpage.onResourceReceived = function(response) {

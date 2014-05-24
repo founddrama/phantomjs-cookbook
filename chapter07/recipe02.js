@@ -1,3 +1,8 @@
+/**
+ * PhantomJS Cookbook
+ * Chapter 7 | Generating Images and Documents with PhantomJS
+ * Recipe 2  | Saving images as Base64 from PhantomJS
+ */
 var webpage = require('webpage').create(),
     args    = require('system').args,
     format  = args[1] || 'jpeg';

@@ -1,4 +1,9 @@
 /*jshint phantom:true, devel:true */
+/**
+ * PhantomJS Cookbook
+ * Chapter 1 | Getting Started with PhantomJS
+ * Recipe 5  | Running PhantomJS with cookies
+ */
 var webpage = require('webpage').create();
 
 webpage.open('http://localhost:3000/cookie-demo', function(status) {

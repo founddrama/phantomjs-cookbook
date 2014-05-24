@@ -1,3 +1,8 @@
+/**
+ * PhantomJS Cookbook
+ * Chapter 7 | Generating Images and Documents with PhantomJS
+ * Recipe 3  | Rendering and rasterizing SVGs from PhantomJS
+ */
 var webpage  = require('webpage').create(),
     filename = 'eyes.png';
 

@@ -9,6 +9,11 @@ Capybara.app_host = 'http://localhost:3000'
 
 THE_TEXT = 'PhantomJS + Capybara + Poltergeist'
 
+#
+# PhantomJS Cookbook
+# Chapter 5 | Functional and End-to-end Testing with PhantomJS
+# Recipe 3  | Adding Poltergeist to a Capybara suite
+#
 module CookbookCapybaraDemo
   class Demo
     include Capybara::DSL

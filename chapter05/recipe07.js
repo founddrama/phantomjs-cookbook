@@ -1,3 +1,8 @@
+/**
+ * PhantomJS Cookbook
+ * Chapter 5 | Functional and End-to-end Testing with PhantomJS
+ * Recipe 7  | Interacting with web pages using CasperJS
+ */
 var casper = require('casper').create();
 
 casper.start('http://localhost:3000/', function() {

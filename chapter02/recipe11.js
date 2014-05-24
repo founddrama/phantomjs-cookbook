@@ -1,4 +1,9 @@
 /*jshint devel:true, phantom:true */
+/**
+ * PhantomJS Cookbook
+ * Chapter 2 | PhantomJS Core Modules
+ * Recipe 11 | Loading a custom module in PhantomJS
+ */
 var argParser = require('../lib/arg-parser'),
     args      = require('system').args.slice(1);
 

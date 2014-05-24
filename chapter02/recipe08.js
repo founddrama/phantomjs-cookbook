@@ -1,4 +1,9 @@
 /*jshint devel:true, phantom:true */
+/**
+ * PhantomJS Cookbook
+ * Chapter 2 | PhantomJS Core Modules
+ * Recipe 8  | Saving a file from a PhantomJS script
+ */
 var fs        = require('fs'),
     targetDir = 'foo-log';
 

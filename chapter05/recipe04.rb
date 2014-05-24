@@ -11,6 +11,11 @@ OUTPUT_STRING   = "=> Captured as '%s'"
 RESOURCE        = '/css-demo'
 SCREENSHOT_NAME = 'chapter05-recipe04%s.png'
 
+#
+# PhantomJS Cookbook
+# Chapter 5 | Functional and End-to-end Testing with PhantomJS
+# Recipe 4  | Taking screenshots during tests with Poltergeist
+#
 module CookbookCapybaraDemo
   class Demo
     include Capybara::DSL

@@ -12,6 +12,11 @@ import java.net.URL;
 
 import static org.junit.Assert.assertEquals;
 
+/**
+ * PhantomJS Cookbook
+ * Chapter 5 | Functional and End-to-end Testing with PhantomJS
+ * Recipe 1  | Running Selenium tests with PhantomJS and GhostDriver
+ */
 public class RemoteWebDriverTest {
 
     private static final String THE_TEXT = "PhantomJS + GhostDriver";

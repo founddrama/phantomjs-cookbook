@@ -1,3 +1,8 @@
+/**
+ * PhantomJS Cookbook
+ * Chapter 5 | Functional and End-to-end Testing with PhantomJS
+ * Recipe 10 | Detecting visual regressions using PhantomCSS
+ */
 var phantomcss = require('./../lib/phantomcss/phantomcss.js');
 
 phantomcss.init({

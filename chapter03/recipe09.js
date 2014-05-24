@@ -1,5 +1,9 @@
 /*jshint devel:true, phantom:true*/
-
+/**
+ * PhantomJS Cookbook
+ * Chapter 3 | Working with webpage Objects
+ * Recipe 9  | Simulating scrolling in PhantomJS
+ */
 var webpage = require('webpage').create();
 
 webpage.viewportSize = { width: 1280, height: 800 };

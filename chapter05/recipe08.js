@@ -1,3 +1,8 @@
+/**
+ * PhantomJS Cookbook
+ * Chapter 5 | Functional and End-to-end Testing with PhantomJS
+ * Recipe 8  | End-to-end testing with CasperJS
+ */
 casper.test.begin('Chapter 5 : Recipe #8', function(test) {
   var THE_TEXT = 'PhantomJS + CasperJS Testing';
 

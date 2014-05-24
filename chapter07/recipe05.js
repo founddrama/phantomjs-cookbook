@@ -1,3 +1,8 @@
+/**
+ * PhantomJS Cookbook
+ * Chapter 7 | Generating Images and Documents with PhantomJS
+ * Recipe 5  | Saving a web page from PhantomJS as a PDF
+ */
 var webpage  = require('webpage').create(),
     filename = 'css-demo.pdf';
 

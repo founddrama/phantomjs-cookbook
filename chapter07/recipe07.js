@@ -1,3 +1,8 @@
+/**
+ * PhantomJS Cookbook
+ * Chapter 7 | Generating Images and Documents with PhantomJS
+ * Recipe 7  | Testing responsive designs with PhantomJS
+ */
 var webpage   = require('webpage').create(),
     args      = require('system').args,
     viewports = args.slice(1).map(function(v) {

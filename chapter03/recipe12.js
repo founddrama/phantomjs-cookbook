@@ -1,5 +1,9 @@
 /*jshint devel:true, phantom:true*/
-
+/**
+ * PhantomJS Cookbook
+ * Chapter 3 | Working with webpage Objects
+ * Recipe 12 | Causing images to fail randomly
+ */
 var webpage          = require('webpage').create(),
     url              = 'http://localhost:3000/cache-demo',
     imgRx            = /\.(?:gif|png|jpe?g)$/i,

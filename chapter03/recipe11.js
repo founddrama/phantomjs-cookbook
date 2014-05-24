@@ -1,5 +1,9 @@
 /*jshint devel:true, phantom:true*/
-
+/**
+ * PhantomJS Cookbook
+ * Chapter 3 | Working with webpage Objects
+ * Recipe 11 | Blocking CSS from downloading
+ */
 var webpage = require('webpage').create(),
     url     = 'http://localhost:3000/css-demo',
     cssRx   = /\.css\??.*$/i,

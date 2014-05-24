@@ -1,4 +1,9 @@
 /*jshint devel:true, phantom:true */
+/**
+ * PhantomJS Cookbook
+ * Chapter 2 | PhantomJS Core Modules
+ * Recipe 2  | Managing cookies with the phantom object
+ */
 var page = require('webpage').create();
 
 if (!phantom.cookiesEnabled) {

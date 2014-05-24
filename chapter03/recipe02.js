@@ -1,4 +1,9 @@
 /*jshint devel:true, phantom:true*/
+/**
+ * PhantomJS Cookbook
+ * Chapter 3 | Working with webpage Objects
+ * Recipe 2  | Opening a URL within PhantomJS
+ */
 var webpage = require('webpage').create();
 
 webpage.open('http://blog.founddrama.net/', function(status) {

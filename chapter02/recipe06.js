@@ -1,4 +1,9 @@
 /*jshint devel:true, phantom:true */
+/**
+ * PhantomJS Cookbook
+ * Chapter 2 | PhantomJS Core Modules
+ * Recipe 6  | Inspecting command-line arguments
+ */
 var system = require('system'),
     args = system.args;
 

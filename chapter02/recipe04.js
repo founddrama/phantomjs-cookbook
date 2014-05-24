@@ -1,4 +1,9 @@
 /*jshint devel:true, phantom:true */
+/**
+ * PhantomJS Cookbook
+ * Chapter 2 | PhantomJS Core Modules
+ * Recipe 4  | Setting up a global PhantomJS error handler
+ */
 phantom.onError = function(message, trace) {
   console.error('[PHANTOMJS ERROR] ' + message);
   trace.forEach(function(t) {

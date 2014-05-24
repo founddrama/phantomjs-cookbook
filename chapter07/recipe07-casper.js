@@ -1,3 +1,10 @@
+/**
+ * PhantomJS Cookbook
+ * Chapter 7 | Generating Images and Documents with PhantomJS
+ * Recipe 7  | Testing responsive designs with PhantomJS
+ *
+ * CasperJS version.
+ */
 var casper    = require('casper').create(),
     viewports = casper.cli.args.map(function(v) {
       return v.split(/x/i).map(Number);

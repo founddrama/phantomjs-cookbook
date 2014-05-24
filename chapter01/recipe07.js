@@ -1,4 +1,9 @@
 /*jshint phantom:true, devel:true */
+/**
+ * PhantomJS Cookbook
+ * Chapter 1 | Getting Started with PhantomJS
+ * Recipe 7  | Running PhantomJS with a JSON configuration file
+ */
 require('webpage')
   .create()
   .open('http://localhost:3000/cookie-demo', function(status) {

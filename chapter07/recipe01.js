@@ -1,3 +1,8 @@
+/**
+ * PhantomJS Cookbook
+ * Chapter 7 | Generating Images and Documents with PhantomJS
+ * Recipe 1  | Rendering images from PhantomJS
+ */
 var webpage  = require('webpage').create(),
     filename = 'index.png';
 

@@ -1,4 +1,9 @@
 /*jshint curly:false, devel:true, phantom:true */
+/**
+ * PhantomJS Cookbook
+ * Chapter 3 | Working with webpage Objects
+ * Recipe 4  | Inspecting page content from a PhantomJS script
+ */
 var webpage = require('webpage').create();
 
 webpage.open('http://blog.founddrama.net/', function(status) {

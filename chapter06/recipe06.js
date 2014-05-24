@@ -1,4 +1,9 @@
-/*global YSLOW:true */
+/*global YSLOW */
+/**
+ * PhantomJS Cookbook
+ * Chapter 6 | Network Monitoring and Performance Analysis
+ * Recipe 6  | Executing a YSlow performance analysis with a custom ruleset
+ */
 YSLOW.registerRuleset({
   id: 'cookbook',
   name: 'PhantomJS Cookbook Example Ruleset',

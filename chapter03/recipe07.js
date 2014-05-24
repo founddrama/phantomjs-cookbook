@@ -1,5 +1,9 @@
 /*jshint devel:true, phantom:true*/
-
+/**
+ * PhantomJS Cookbook
+ * Chapter 3 | Working with webpage Objects
+ * Recipe 7  | Simulating mouse clicks in PhantomJS
+ */
 var webpage = require('webpage').create(),
     url     = 'http://localhost:3000/';
 

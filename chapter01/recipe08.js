@@ -1,4 +1,9 @@
 /*jshint phantom:true, devel:true */
+/**
+ * PhantomJS Cookbook
+ * Chapter 1 | Getting Started with PhantomJS
+ * Recipe 8  | Debugging a PhantomJS script
+ */
 var page = require('webpage').create();
 
 page.onResourceReceived = function(res) {

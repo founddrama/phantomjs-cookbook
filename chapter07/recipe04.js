@@ -1,3 +1,8 @@
+/**
+ * PhantomJS Cookbook
+ * Chapter 7 | Generating Images and Documents with PhantomJS
+ * Recipe 4  | Generating clipped screenshots from PhantomJS
+ */
 var webpage  = require('webpage').create(),
     selector = require('system').args[1],
     filename;

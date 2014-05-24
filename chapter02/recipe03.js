@@ -1,6 +1,10 @@
 /*jshint devel:true, phantom:true */
-/*global fibonacci:true */
-
+/*global fibonacci */
+/**
+ * PhantomJS Cookbook
+ * Chapter 2 | PhantomJS Core Modules
+ * Recipe 3  | Specifying a path for external scripts
+ */
 var foo = 'foo';
 
 console.log('Initial libraryPath: ' + phantom.libraryPath);

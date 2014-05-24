@@ -1,3 +1,8 @@
+/**
+ * PhantomJS Cookbook
+ * Chapter 7 | Generating Images and Documents with PhantomJS
+ * Recipe 6  | Applying custom headers and footers to PDFs generated from PhantomJS
+ */
 var webpage  = require('webpage').create(),
     filename = 'css-demo.pdf',
     datetime = new Date().toString(),

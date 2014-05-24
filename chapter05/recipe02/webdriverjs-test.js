@@ -1,5 +1,7 @@
 /**
- * Chapter 5, Recipe 2
+ * PhantomJS Cookbook
+ * Chapter 5 | Functional and End-to-end Testing with PhantomJS
+ * Recipe 2  | Using WebdriverJS as a Selenium client for PhantomJS
  */
 var assert   = require('assert'),
     driver   = require('webdriverjs'),

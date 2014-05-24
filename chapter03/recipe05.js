@@ -1,4 +1,9 @@
 /*jshint devel:true, phantom:true */
+/**
+ * PhantomJS Cookbook
+ * Chapter 3 | Working with webpage Objects
+ * Recipe 5  | Including external JavaScript on the page
+ */
 var webpage = require('webpage').create(),
     script  = '../lib/hemingway.js',
     jquery  = 'http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js';

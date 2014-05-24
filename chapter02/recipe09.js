@@ -1,4 +1,9 @@
 /*jshint devel:true, phantom:true */
+/**
+ * PhantomJS Cookbook
+ * Chapter 2 | PhantomJS Core Modules
+ * Recipe 9  | Reading a file from PhantomJS
+ */
 phantom.onError = function(message, trace) {
   console.error('[Something went wrong!] - ' + message);
   phantom.exit(1);

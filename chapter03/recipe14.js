@@ -1,5 +1,9 @@
 /*jshint devel:true, phantom:true*/
-
+/**
+ * PhantomJS Cookbook
+ * Chapter 3 | Working with webpage Objects
+ * Recipe 14 | Working with WebSockets in PhantomJS
+ */
 var webpage = require('webpage').create();
 
 webpage.onConsoleMessage = function(m) {

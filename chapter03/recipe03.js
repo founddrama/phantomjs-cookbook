@@ -1,4 +1,9 @@
 /*jshint devel:true, phantom:true */
+/**
+ * PhantomJS Cookbook
+ * Chapter 3 | Working with webpage Objects
+ * Recipe 3  | Generating a POST from PhantomJS
+ */
 var webpage  = require('webpage').create(),
     url      = 'http://localhost:3000/post-demo',
     postData = JSON.stringify({
