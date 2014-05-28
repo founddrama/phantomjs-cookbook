@@ -1,7 +1,7 @@
 {
   "name": "phantomjs-sandbox",
-  "description": "A trivial demo app that demonstrates some of the PhantomJS features for 'The PhantomJS Cookbook'.",
-  "version": "0.0.1",
+  "description": "A trivial demo app that demonstrates some of the PhantomJS features for 'PhantomJS Cookbook'.",
+  "version": "1.0.0",
   "dependencies": {
     "express": "4.0.0",
     "body-parser": "1.0.2",
@@ -12,5 +12,6 @@
     "ejs": "*",
     "lorem-ipsum": "~1.0.1",
     "websocket-driver": "~0.3.2"
-  }
+  },
+  "private": true
 }
