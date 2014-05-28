@@ -19,5 +19,6 @@
     "karma-jasmine": "~0.1.5",
     "karma-coverage": "~0.1.5",
     "mocha-phantomjs": "~3.3.1"
-  }
+  },
+  "private": true
 }

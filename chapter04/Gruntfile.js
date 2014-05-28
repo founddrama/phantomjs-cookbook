@@ -10,7 +10,7 @@ module.exports = function(grunt) {
       recipe04: {
         src: '../lib/string-utils.js',
         options: {
-          specs: '../lib/*-spec.js'
+          specs: '../lib/string*-spec.js'
         }
       }
     },
