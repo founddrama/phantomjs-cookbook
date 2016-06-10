@@ -4,11 +4,15 @@
  * Chapter 1 | Getting Started with PhantomJS
  * Recipe 4  | Running a PhantomJS script with arguments
  */
-if (phantom.args.length === 0) {
+var system = require('system');
+if (system.args.length === 1) {
   console.log('No arguments were passed in.');
 } else {
-  phantom.args.forEach(function(arg, index) {
+  system.args.forEach(function(arg, index) {
+  	// skip first arg which is script name
+    if(i != 0) {
     console.log('[' + index + '] ' + arg);
+	}
   });
 }
 
