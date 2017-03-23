@@ -5,6 +5,8 @@ _[The PhantomJS Cookbook](http://goo.gl/NJnFq1)_. The book is a deep-dive into
 [PhantomJS](http://phantomjs.org/), its core APIs, and the eco-system of testing
 tools that have sprung up around it.
 
+![PhantomJS Cookbook cover](https://images-na.ssl-images-amazon.com/images/I/517EQf5-aoL._SX258_BO1,204,203,200_.jpg)
+
 ### What's here?
 
 The chapters break down as follows:
