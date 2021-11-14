@@ -1,7 +1,7 @@
 # The PhantomJS Cookbook
 
 This repository is the sample code that goes along with the book
-_[The PhantomJS Cookbook](http://goo.gl/NJnFq1)_. The book is a deep-dive into
+_[The PhantomJS Cookbook](https://www.packtpub.com/product/phantomjs-cookbook/9781783981922)_. The book is a deep-dive into
 [PhantomJS](http://phantomjs.org/), its core APIs, and the eco-system of testing
 tools that have sprung up around it.
 
